@@ -182,7 +182,7 @@ defmodule ExqUi.RouterPlug do
     end
 
     # precompile index.html into render_index/1 function
-    index_path = Path.join([Application.app_dir(:exq_ui), "priv/static/index.html"])
+    index_path = Path.join([Application.app_dir(:exq_ui), "priv/ember/dist/index.html"])
     EEx.function_from_file :defp, :render_index, index_path, [:assigns]
 
     match _ do
